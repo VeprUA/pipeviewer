@@ -9,3 +9,4 @@ authors = ["Maksym Yadvinskyy <maks@revent.studio>"]
 [dependencies]
 clap = "2.33.3"
 crossbeam = "0.8.1"
+crossterm = "0.21.0"

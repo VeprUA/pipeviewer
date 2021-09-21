@@ -1,8 +1,8 @@
 use crate::CHUNK_SIZE;
 
+use crossbeam::channel::Sender;
 use std::fs::File;
 use std::io::{self, BufReader, Read, Result};
-use crossbeam::channel::Sender;
 
 pub fn read_loop(infile: &str, stats_tx: Sender<usize>, write_tx: Sender<Vec<u8>>) -> Result<()> {
     let mut reader: Box<dyn Read> = if !infile.is_empty() {
